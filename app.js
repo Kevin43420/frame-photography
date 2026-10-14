@@ -147,7 +147,7 @@
     video.defaultMuted = true;
     try {
       const promise = video.play();
-      if (promise && typeof promise.catch === 'function') promise.catch(() => { if (onFailure) onFailure(); });
+      if (promise && typeof promise.catch === 'function') promise.catch(error => { if (error?.name === 'AbortError') return; if (onFailure) onFailure(); });
     } catch (_) {
       if (onFailure) onFailure();
     }
@@ -849,6 +849,7 @@
     if (view !== 'motion' || !motionEnabled || !stageInView || document.hidden) { pause(dom.stageVideo); return; }
     dom.stageVideo.hidden = false;
     if (dom.stagePhoto) dom.stagePhoto.hidden = true;
+    text(dom.cameraStatus, 'MOTION / MUTED PREVIEW');
   });
   on(dom.helpToggle, 'click', () => {
     if (!dom.cameraHelp) return;
