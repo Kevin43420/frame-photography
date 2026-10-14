@@ -1,21 +1,37 @@
-# FRAME / 交互摄影档案
+# FRAME / Still & Motion
 
-一个以照相机布局为灵感的静态摄影作品网站，使用 HTML、CSS 和原生 JavaScript，无需安装依赖或构建。
+A camera-inspired archive of photography, films and festival records. Built with HTML, CSS and native JavaScript, with no build step or external runtime dependencies.
 
-## 本地使用
+Live site: <https://kevin43420.github.io/frame-photography/>.
 
-下载完整仓库后，在浏览器中打开 `index.html`。保留 `样片/` 的目录结构与文件名。
+## The experience
 
-## GitHub Pages
+- Turn the viewfinder dial between stills and motion. Film previews loop silently; the full player opens on request.
+- Browse 15 coherent visual series across six photographic disciplines. Each series preserves a consistent tone, setting and visual rhythm; navigation and auto-browse remain within the selected series.
+- 73 photographs are displayed from 74 source files. A second, more heavily compressed export of one boxing photograph is excluded from the display.
+- Adjust photographic exposure, toggle the composition grid and hold the shutter to focus before saving. A personal roll stores up to 12 photographs or film versions in the current browser.
+- Five motion works offer six viewing versions: the complete 150,000 SHOTS trailer, three clearly labeled 60-second excerpts and two 8-second fashion pieces. Large original films are not uploaded.
+- Motion respects the system's reduced-motion preference and can be paused manually.
+- All interface copy, photograph titles and collection labels are in English.
 
-在仓库的 **Settings → Pages** 中选择 **Deploy from a branch**，选择 `main` 分支和 `/ (root)` 目录，保存后即可通过 Pages 提供的网址访问。`.nojekyll` 用于直接发布这些静态文件。
+## Files and local use
 
-## 交互
+Download the repository and open `index.html`. Keep `styles.css`, `app.js`, `archive-data.js`, `样片/` and `media/` at their existing relative paths. No dependency installation or build is required.
 
-- 拨盘切换作品模式，分类按钮筛选照片。
-- 调整曝光、闪光灯和构图网格。
-- 按住快门对焦，松开后收录到胶卷；胶卷最多保存 12 张。
-- 点击缩略图取景，使用左右箭头切换照片，空格键触发快门。
-- 照片可放大查看；胶卷记录保存在当前浏览器的本地存储中。
+`archive-data.js` contains the photographic taxonomy, motion versions and verified festival records. Full photographs remain under `样片/`; optimized thumbnails, videos, original laurel crops, posters and film stills are under `media/`.
 
-照片文件保存在 `样片/`，网站样式和交互逻辑均在 `index.html` 内。
+GitHub Pages publishes directly from the root of the `main` branch. `.nojekyll` preserves direct static-file delivery.
+
+## Festival records
+
+The supplied original laurels and the festival poster establish five distinct records for **150,000 SHOTS**, a documentary by **Xiaobo He**:
+
+- WorldFest-Houston: REMI WINNER, 2025.
+- Robinson Film Awards: SEMI-FINALIST, 2024.
+- London Director Awards: NOMINEE, 2025.
+- Toronto International Nollywood Film Festival: WINNER, 2025.
+- Boden International Film Festival: FINALIST; no year is shown on the supplied mark.
+
+The black and white TINFF files are variants of the same record. No award category, Remi level or missing year is inferred. Private contact details in the source festival application are not published.
+
+**150,000 SHOTS** retains its supplied English title and credit. **There Are Still Fish Here** and **Haiyue Garden** are English renderings of the supplied Chinese titles. The two untitled fashion clips use descriptive display names.
