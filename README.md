@@ -34,7 +34,7 @@ The supplied original laurels and the festival poster establish five distinct re
 
 The black and white TINFF files are variants of the same record. No award category, Remi level or missing year is inferred. Private contact details in the source festival application are not published.
 
-**150,000 SHOTS** retains its supplied English title and credit. **There Are Still Fish Here** and **Haiyue Garden** are English renderings of the supplied Chinese titles. The two untitled fashion clips use descriptive display names.
+**150,000 SHOTS** retains its supplied English title and credit. **We Still Have Fish Here** retains its onscreen English title. **Haiyue Garden** is an English rendering of the supplied Chinese title. The two untitled fashion clips use descriptive display names.
 
 ## V3 refinement
 
