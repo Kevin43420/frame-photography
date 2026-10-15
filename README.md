@@ -39,3 +39,5 @@ The black and white TINFF files are variants of the same record. No award catego
 ## V3 refinement
 
 The overlaid sky caption on **Statues and Cranes** is removed in a separate display asset; the original photograph is retained. Player and preview versions of each film montage share the same cuts. Fashion pieces retain their existing source animation, with no additional cuts claimed. All montage sound comes from the source films; no music is added.
+
+The ending credits in **We Still Have Fish Here** are presented in English in both player and preview versions: “Cinematography, Editing & Direction / Xiaobo He / Thank You for Watching”. The translated card holds for two seconds within the existing 20-second montage; the original audio is retained.
