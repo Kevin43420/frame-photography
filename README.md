@@ -10,7 +10,7 @@ Live site: <https://kevin43420.github.io/frame-photography/>.
 - Browse 15 coherent visual series across six photographic disciplines. Each series preserves a consistent tone, setting and visual rhythm; navigation and auto-browse remain within the selected series.
 - 73 photographs are displayed from 74 source files. A second, more heavily compressed export of one boxing photograph is excluded from the display.
 - Adjust photographic exposure, toggle the composition grid and hold the shutter to focus before saving. A personal roll stores up to 12 photographs or film versions in the current browser.
-- Five motion works offer six viewing versions: the complete 150,000 SHOTS trailer, three clearly labeled 60-second excerpts and two 8-second fashion pieces. Large original films are not uploaded.
+- Five motion works offer five selected sequences: three new 20-second, ten-shot nonlinear montages and two original 8-second animated fashion collages. The new film edits use hard cuts across widely separated moments, including original titles and available ending cards; complete narrative excerpts are no longer offered in the interface. Large original films are not uploaded.
 - Motion respects the system's reduced-motion preference and can be paused manually.
 - All interface copy, photograph titles and collection labels are in English.
 
@@ -35,3 +35,7 @@ The supplied original laurels and the festival poster establish five distinct re
 The black and white TINFF files are variants of the same record. No award category, Remi level or missing year is inferred. Private contact details in the source festival application are not published.
 
 **150,000 SHOTS** retains its supplied English title and credit. **There Are Still Fish Here** and **Haiyue Garden** are English renderings of the supplied Chinese titles. The two untitled fashion clips use descriptive display names.
+
+## V3 refinement
+
+The overlaid sky caption on **Statues and Cranes** is removed in a separate display asset; the original photograph is retained. Player and preview versions of each film montage share the same cuts. Fashion pieces retain their existing source animation, with no additional cuts claimed. All montage sound comes from the source films; no music is added.

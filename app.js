@@ -94,7 +94,7 @@
     const value = Math.max(0, Math.round(Number(seconds) || 0));
     return `${Math.floor(value / 60)}:${pad(value % 60)}`;
   };
-  const versionLabel = video => video.excerpt ? '60s excerpt' : String(video.id || '').includes('trailer') ? 'Trailer' : `${Math.round(Number(video.duration) || 0)}s film`;
+  const versionLabel = video => video.presentation === 'montage' ? 'Montage' : video.presentation === 'trailer' ? 'Original trailer' : video.excerpt ? `${Math.round(Number(video.duration) || 0)}s excerpt` : String(video.id || '').includes('trailer') ? 'Trailer' : `${Math.round(Number(video.duration) || 0)}s film`;
   const imageButton = (className, imageSrc, title, ariaLabel) => {
     const button = document.createElement('button');
     button.type = 'button';
@@ -222,7 +222,7 @@
       dom.openWork.disabled = !item;
       dom.openWork.setAttribute('aria-label', view === 'photo' ? 'Enlarge the selected photograph' : `Play ${item?.title || 'film'}, ${item ? versionLabel(item) : ''}`);
       const label = dom.openWork.querySelector('[data-open-label]');
-      text(label || dom.openWork, view === 'photo' ? 'Enlarge' : 'Play film');
+      text(label || dom.openWork, view === 'photo' ? 'Enlarge' : 'Play sequence');
     }
     for (const button of [dom.prevWork, dom.nextWork]) if (button) button.disabled = list.length < 2;
     if (dom.shutterButton) dom.shutterButton.disabled = !item;
@@ -464,7 +464,7 @@
       heading.textContent = video.title;
       const metadata = document.createElement('span');
       metadata.className = 'program-meta';
-      metadata.textContent = versions.length > 1 ? 'Documentary feature · Trailer / 60s excerpt' : `${video.kind} / ${durationLabel(video.duration)}`;
+      metadata.textContent = versions.length > 1 ? `Documentary feature · ${versions.map(versionLabel).join(' / ')}` : `${video.kind} / ${durationLabel(video.duration)}`;
       const description = document.createElement('p');
       description.className = 'program-description';
       description.textContent = video.description;
@@ -483,7 +483,7 @@
       const playButton = document.createElement('button');
       playButton.type = 'button';
       playButton.className = 'program-version program-play';
-      playButton.textContent = 'Play film';
+      playButton.textContent = 'Play sequence';
       playButton.setAttribute('aria-label', `Play ${video.title}, ${versionLabel(video)}`);
       on(playButton, 'click', () => {
         const selected = versions.find(version => version.id === videoId) || video;
@@ -580,7 +580,7 @@
     player.setAttribute('controls', '');
     player.setAttribute('playsinline', '');
     text(dom.dialogTitle, video.title);
-    text(dom.dialogSubtitle, `${versionLabel(video)} / ${durationLabel(video.duration)}${video.excerpt ? ' · Selected passage from the film' : ''}`);
+    text(dom.dialogSubtitle, `${versionLabel(video)} / ${durationLabel(video.duration)}${video.presentation === 'montage' ? ' · Selected moments, rearranged' : video.excerpt ? ' · Selected passage from the film' : ''}`);
     if (typeof dom.mediaDialog.showModal === 'function') {
       if (!dom.mediaDialog.open) dom.mediaDialog.showModal();
     } else dom.mediaDialog.setAttribute('open', '');
